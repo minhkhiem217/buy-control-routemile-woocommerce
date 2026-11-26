@@ -1,4 +1,4 @@
-# Contributing to RouteMile for WooCommerce
+# Contributing to Buy Control for WooCommerce
 
 Thank you for your interest in contributing! This document provides guidelines for contributing to this project.
 
@@ -18,12 +18,12 @@ Be respectful and professional in all interactions.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/codermillat/RouteMile-for-WooCommerce.git
+   git clone https://github.com/minhkhiem217/buy-control-routemile-woocommerce.git
    ```
 
 2. Copy to your WordPress plugins directory:
    ```bash
-   cp -r RouteMile-for-WooCommerce /path/to/wordpress/wp-content/plugins/
+   cp -r buy-control-routemile-woocommerce /path/to/wordpress/wp-content/plugins/
    ```
 
 3. Activate the plugin in WordPress admin
@@ -55,11 +55,11 @@ Be respectful and professional in all interactions.
 Run the test suite before submitting changes:
 
 ```bash
-cd wp-content/plugins/routemile-woocommerce
-php tests/FXWTestRunner.php
+cd wp-content/plugins/buy-control-routemile-woocommerce
+php tests/RouteWTestRunner.php
 ```
 
-All 118 tests must pass.
+Run the full available suite; report failures and do not claim unrun tests passed.
 
 ## Pull Request Process
 
@@ -69,7 +69,7 @@ All 118 tests must pass.
 4. Update CHANGELOG.md if applicable
 5. Submit a pull request with a clear description
 
-New feature work follows the phased plan in [docs/ROADMAP.md](docs/ROADMAP.md) — please open an issue before starting large changes so work doesn't collide with an in-flight phase. Full architecture context lives in [AGENTS.md](AGENTS.md).
+Use [AGENTS.md](AGENTS.md) for current project constraints and [docs/ROADMAP.md](docs/ROADMAP.md) as inherited reference material, not an approved Buy Control roadmap.
 
 ## License
 

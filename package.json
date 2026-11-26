@@ -1,8 +1,8 @@
 {
-  "name": "routemile-woocommerce-tests",
+  "name": "buy-control-woocommerce-tests",
   "version": "1.5.0",
   "private": true,
-  "description": "Browser test harness for RouteMile for WooCommerce. Not shipped with the plugin.",
+  "description": "Browser test harness for Buy Control for WooCommerce. Not shipped with the plugin.",
   "license": "GPL-3.0-or-later",
   "scripts": {
     "test:e2e": "playwright test",

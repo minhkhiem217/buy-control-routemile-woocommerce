@@ -1,5 +1,5 @@
-=== RouteMile for WooCommerce ===
-Contributors: codermillat
+=== Buy Control for WooCommerce ===
+Contributors: codermillat, minhkhiem217
 Tags: woocommerce, delivery, food delivery, restaurant, local delivery
 Requires at least: 6.0
 Tested up to: 7.1
@@ -11,6 +11,8 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Map-based delivery management for single-restaurant WooCommerce stores: pin-drop checkout, distance-based fees, custom order statuses, rider app.
 
 == Description ==
+
+Independent modified distribution based on RouteMile for WooCommerce by MD MILLAT HOSEN. Maintained at https://github.com/minhkhiem217/buy-control-routemile-woocommerce. Install from this repository; the upstream WordPress.org listing is a separate distribution. Internal identifiers and some UI labels remain unchanged for compatibility.
 
 RouteMile turns a single-restaurant WooCommerce store into a full delivery operation. Customers drop a pin on a map at checkout; the store owner manages orders through a dedicated deliveries dashboard; riders work from an installable mobile web app.
 

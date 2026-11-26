@@ -1,8 +1,8 @@
-# RouteMile-for-WooCommerce .distignore
+# Buy Control for WooCommerce .distignore
 #
 # Used by `wp dist-archive` / `wp plugin zip` / WP-CLI deploy tooling to
 # determine which paths are NOT shipped in the production zip uploaded to
-# the WordPress.org Plugin Directory. Mirrors the .gitignore plus a few
+# a Buy Control distribution. Mirrors the .gitignore plus a few
 # extras that are committed for source hygiene but must not ship.
 
 # WP.org directory listing assets live here during submission, but they
