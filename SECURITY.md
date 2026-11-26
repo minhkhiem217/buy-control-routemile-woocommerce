@@ -1,50 +1,7 @@
-# Security Policy
+# Security policy
 
-## Supported Versions
+Buy Control starts from RouteMile 1.6.5. No independent production security certification or support SLA is claimed.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 1.1.x   | :white_check_mark: |
-| 1.0.x   | :white_check_mark: |
-| < 1.0   | :x:                |
+Report vulnerabilities privately to the repository maintainer using GitHub private vulnerability reporting if enabled, or request a private contact channel without disclosing exploit details in public. Include affected revision, reproduction steps, impact and suggested mitigation. Redact credentials, customer data and payment information.
 
-## Reporting a Vulnerability
-
-If you discover a security vulnerability, please report it responsibly:
-
-1. **Do NOT** open a public GitHub issue
-2. Email: [Contact the author directly via GitHub]
-3. Include:
-   - Description of the vulnerability
-   - Steps to reproduce
-   - Potential impact
-
-You can expect an initial response within 48 hours.
-
-## Security Measures
-
-This plugin implements the following security practices:
-
-### Input Validation
-- All user inputs are sanitized using WordPress functions
-- `sanitize_text_field()`, `absint()`, `sanitize_email()`
-
-### Output Escaping
-- All output is escaped to prevent XSS
-- `esc_html()`, `esc_attr()`, `wp_kses_post()`
-
-### CSRF Protection
-- All forms use nonce verification
-- All AJAX endpoints verify nonces
-
-### Authorization
-- Capability checks before sensitive operations
-- `current_user_can('edit_shop_orders')`
-
-### Database Security
-- Uses WooCommerce CRUD methods
-- No direct SQL queries with user input
-
-### Rate Limiting
-- API calls are rate-limited to prevent abuse
-- IP addresses are hashed for privacy
+Before deployment: use HTTPS, restrict map API keys, verify authorization and nonce checks for order and COD actions, back up the database, and test on a staging site. Security fixes require regression tests and review.

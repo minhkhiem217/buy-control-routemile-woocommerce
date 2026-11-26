@@ -1,8 +1,8 @@
-# RouteMile for WooCommerce
+# Buy Control for WooCommerce
 
 A complete delivery management system for single-restaurant WooCommerce stores.
 
-**[Install from WordPress.org](https://wordpress.org/plugins/routemile-for-woocommerce/)** — the plugin is now in the official [WordPress Plugin Directory](https://wordpress.org/plugins/routemile-for-woocommerce/), so you can install it directly from **Plugins → Add New** in your admin.
+Independent GPL-licensed distribution maintained at [minhkhiem217/buy-control-routemile-woocommerce](https://github.com/minhkhiem217/buy-control-routemile-woocommerce). Install this distribution from its own source, not the upstream WordPress.org listing.
 
 ![Version](https://img.shields.io/badge/Version-1.6.5-blue)
 ![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-blue)
@@ -10,15 +10,14 @@ A complete delivery management system for single-restaurant WooCommerce stores.
 ![PHP](https://img.shields.io/badge/PHP-7.4%2B-blue)
 ![HPOS](https://img.shields.io/badge/HPOS-Compatible-green)
 ![License](https://img.shields.io/badge/License-GPL--3.0--or--later-green)
-[![WordPress.org](https://img.shields.io/badge/WordPress.org-Plugin%20Directory-21759b?logo=wordpress)](https://wordpress.org/plugins/routemile-for-woocommerce/)
 
-> **Latest release:** v1.6.5 — hotfix for HPOS order-status updates failing to save and memory exhaustion on large order histories. Built on the Mile Zero design system across every customer and rider surface, with renameable order stages, brand colour, and the cash settlement workflow. See [`CHANGELOG.md`](./CHANGELOG.md) for full details.
+> **Imported baseline:** upstream v1.6.5 — hotfix for HPOS order-status updates failing to save and memory exhaustion on large order histories. Built on the Mile Zero design system across every customer and rider surface, with renameable order stages, brand colour, and the cash settlement workflow. See [`CHANGELOG.md`](./CHANGELOG.md) for full details.
 
 ## Features
 
 ### 🗺️ Location-based checkout
 
-- **Two map providers**: Google Maps (with your API key) or a free OpenStreetMap + Leaflet mode with no key required
+- **Map providers**: Google Maps, OpenStreetMap + Leaflet, MapTiler and Geoapify
 - **Interactive pin drop** with visible delivery-radius circle; orders outside the radius are blocked before payment
 - **Distance fees**: flat, per-km, or admin-defined distance tiers, plus free-delivery threshold and minimum order amount — all configurable
 - **Live Order summary**: fee updates as the customer moves the pin
@@ -55,7 +54,7 @@ The plugin is self-contained except for the map provider you choose:
 
 - **Google Maps mode** loads JavaScript from `maps.googleapis.com` and sends geocoding/routing requests server-side there. The customer's chosen coordinates and your store address are sent to Google. Your API key stays in your own database.
 - **OpenStreetMap (Leaflet) mode** loads map tiles from `tile.openstreetmap.org` and sends coordinate lookups to `nominatim.openstreetmap.org`.
-- No other data leaves your site. No telemetry, analytics, or advertising.
+- OpenStreetMap mode can also contact the public OSRM routing service; MapTiler and Geoapify modes use their respective services. See [readme.txt](readme.txt) for inherited provider disclosures. Review provider terms and privacy settings before production.
 
 ## Shortcodes
 
@@ -76,7 +75,7 @@ The runner validates PHP syntax, security patterns (ABSPATH checks, nonce verifi
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md) for version history.
+See [CHANGELOG.md](CHANGELOG.md) for Buy Control changes and [upstream history](docs/archive/UPSTREAM-CHANGELOG.md) for inherited releases.
 
 ## Contributing
 
@@ -86,11 +85,11 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Run `php tests/RouteWTestRunner.php` bef
 
 [GPL-3.0-or-later](LICENSE.md) — same license family as WooCommerce itself.
 
-## Author / Developer
+## Maintainer and attribution
 
-**MD MILLAT HOSEN**
-Website: [millat.is-a.dev](https://millat.is-a.dev/)
-GitHub: [@codermillat](https://github.com/codermillat)
+Maintainer: [minhkhiem217](https://github.com/minhkhiem217).
+
+Based on RouteMile for WooCommerce by MD MILLAT HOSEN ([upstream source](https://github.com/codermillat/routemile-woocommerce)). Original copyright and GPL notices remain applicable. See [NOTICE.md](NOTICE.md).
 
 ## Requirements
 
@@ -102,17 +101,27 @@ GitHub: [@codermillat](https://github.com/codermillat)
 
 ## Installation
 
-**From WordPress.org (recommended):** search "RouteMile" under **Plugins → Add New**, or get it directly at [wordpress.org/plugins/routemile-for-woocommerce](https://wordpress.org/plugins/routemile-for-woocommerce/).
+**Install from this repository:**
 
-**Manual upload:**
+Clone into an existing WordPress installation's plugins directory:
+
+```bash
+git clone https://github.com/minhkhiem217/buy-control-routemile-woocommerce.git wp-content/plugins/buy-control-routemile-woocommerce
+```
+
+Alternatively, package the plugin files as a ZIP and upload through WordPress. Do not activate upstream and Buy Control together: internal identifiers are intentionally unchanged.
+
+**Setup:**
 
 1. Install and activate WooCommerce first.
-2. Upload the plugin ZIP via **Plugins → Add New → Upload Plugin**.
+2. Activate Buy Control for WooCommerce in **Plugins** (or upload the ZIP first).
 3. Go to **WooCommerce → Settings → RouteMile**, pick a map provider, and set your restaurant location, delivery radius, and delivery fees.
 4. Enable the RouteMile Delivery method in your shipping zone(s), or let the plugin add it automatically.
 5. Create users with the "Delivery Boy" role — their app lives at their Delivery Dashboard page.
 
 ## Configuration
+
+Some admin labels still say RouteMile during the compatibility-preserving transition.
 
 ### Choosing a map provider
 

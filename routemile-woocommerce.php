@@ -1,13 +1,15 @@
 <?php
 /**
- * Plugin Name:       RouteMile for WooCommerce
- * Plugin URI:        https://github.com/codermillat/routemile-woocommerce
+ * Plugin Name:       Buy Control for WooCommerce
+ * Plugin URI:        https://github.com/minhkhiem217/buy-control-routemile-woocommerce
+ * Update URI:        https://github.com/minhkhiem217/buy-control-routemile-woocommerce
  * Description:       Map-based delivery management for single-restaurant WooCommerce stores.
  * Version:           1.6.5
- * Author:            MD MILLAT HOSEN
- * Author URI:        https://millat.is-a.dev/
+ * Author:            MD MILLAT HOSEN; Buy Control maintainers
+ * Author URI:        https://github.com/minhkhiem217
  * License:           GPL-3.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
+ * Modified for Buy Control on 2026-11-26; original GPL notices retained.
  * Text Domain:       routemile-for-woocommerce
  * Domain Path:       /languages
  * Requires at least: 6.0

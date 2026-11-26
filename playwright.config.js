@@ -2,16 +2,16 @@
 const { defineConfig, devices } = require('@playwright/test');
 
 /**
- * Playwright configuration for RouteMile browser tests.
+ * Playwright configuration for Buy Control browser tests.
  *
  * Targets a real WordPress install rather than a mock: the bugs worth
  * catching here (map tiles not painting, hooks firing at the wrong time,
  * block-theme rendering) only appear against real WooCommerce.
  *
- * Point ROUTEW_BASE_URL at your dev site. Defaults to the Local by Flywheel
- * site used during development.
+ * Point BUY_CONTROL_BASE_URL at a dedicated development site.
+ * ROUTEW_BASE_URL remains supported for compatibility.
  */
-const baseURL = process.env.ROUTEW_BASE_URL || 'http://routemile-woocommerce.local';
+const baseURL = process.env.BUY_CONTROL_BASE_URL || process.env.ROUTEW_BASE_URL || 'http://localhost:8080';
 
 module.exports = defineConfig({
 	testDir: './tests/e2e',
